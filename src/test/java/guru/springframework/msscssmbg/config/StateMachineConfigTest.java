@@ -1,4 +1,4 @@
-package guru.springframework.msscssmbg;
+package guru.springframework.msscssmbg.config;
 
 import guru.springframework.msscssmbg.domain.PaymentEvent;
 import guru.springframework.msscssmbg.domain.PaymentState;
