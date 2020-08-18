@@ -16,7 +16,7 @@ import javax.transaction.Transactional;
 
 @RequiredArgsConstructor
 @Service
-public class PaymentserviceImpl implements Paymentservice {
+public class PaymentServiceImpl implements PaymentService {
 
     public static final String PAYMENT_ID_HEADER = "payment_id";
 

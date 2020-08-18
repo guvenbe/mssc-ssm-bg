@@ -14,13 +14,11 @@ import org.springframework.statemachine.StateMachine;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 class PaymentserviceImplTest {
 
     @Autowired
-    Paymentservice paymentservice;
+    PaymentService paymentservice;
 
     @Autowired
     PaymentRepository paymentRepository;
@@ -48,7 +46,6 @@ class PaymentserviceImplTest {
 
     @Transactional
     @RepeatedTest(10)
-    @Test
     public void testAuth() {
         Payment savedPayment = paymentservice.newPayment(payment);
         StateMachine<PaymentState, PaymentEvent> preAuthSM = paymentservice.preAuth(savedPayment.getId());
